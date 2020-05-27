@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IconApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Icon" Height="450" Width="800" FontFamily="Century Gothic" >
     <Grid>
-        
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="366" VerticalAlignment="Top" Width="737" Margin="28,22,0,0"/>
+        <Label FontWeight="Bold" Content="#3" Margin="320,182,324,198"/>
+        <Label FontWeight="Bold" Content="#4" Margin="320,228,324,152"/>
+        <Label FontWeight="Bold" Content="#5" Margin="320,267,324,121"/>
+        <Label FontWeight="Bold" Content="#2" Margin="320,138,324,242"/>
+        <Label FontWeight="Bold" Content="#1" Margin="320,94,324,286"/>
+        <TextBox x:Name="txtNumber1" PreviewTextInput="IsDecimal" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="366,272,0,0" RenderTransformOrigin="2.146,4.696"/>
+        <Button x:Name="btnCalculate" Foreground="Blue" Click="BtnCalculate_Click" Content="Calculate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Background="White" BorderBrush="#FF000CFF" BorderThickness="2" FontWeight="Bold" Height="30" Margin="344,313,0,0"/>
+        <TextBox x:Name="txtNumber2" PreviewTextInput="IsDecimal" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="366,228,0,0"/>
+        <TextBox x:Name="txtNumber3" PreviewTextInput="IsDecimal" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="366,182,0,0"/>
+        <TextBox x:Name="txtNumber4" PreviewTextInput="IsDecimal" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="366,94,0,0" Focusable="True"/>
+        <TextBox x:Name="txtNumber5" PreviewTextInput="IsDecimal" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="366,138,0,0"/>
+        <Label x:Name="lblResult" Content="" Background="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Blue" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="6.976,13.5" Margin="28,357,0,0" Width="737" Height="31"/>
     </Grid>
 </Window>
