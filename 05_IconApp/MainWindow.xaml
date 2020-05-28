@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_05_IconApp"
         mc:Ignorable="d"
-        Title="ICON" Height="436.466" Width="470.113">
+        Title="ICON" Height="436.466" Width="470.113" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="ID NUMBER:" FontWeight="Bold" Margin="73,76,290,298"/>
         <TextBox x:Name="txtIDNumber"  MaxLength="13" Margin="171,74,63,298"/>

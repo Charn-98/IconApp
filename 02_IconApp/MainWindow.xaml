@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_02_IconApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="366" VerticalAlignment="Top" Width="737" Margin="28,22,0,0"/>
         <Label x:Name="lblNumber" FontWeight="Bold" Content="" HorizontalContentAlignment="Center" Margin="348,145,324,235"/>

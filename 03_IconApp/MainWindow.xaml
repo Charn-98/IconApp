@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_03_IconApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ICON" Height="450" Width="573.5" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <DataGrid x:Name="dtResults" HorizontalAlignment="Left" Height="340" VerticalAlignment="Top" Width="147" Margin="377,33,0,0" ItemsSource="{Binding oNames}" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="NUMBER" Binding="{Binding Key}" />
+                <DataGridTextColumn Header="NAME" Binding="{Binding Value}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285" Margin="60,78,0,0"/>
+        <Button x:Name="btnAdd" Click="BtnAdd_Click" Content="ADD" Foreground="Blue" Background="White" FontWeight="Bold" BorderBrush="Blue" BorderThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="60,117,0,0"/>
+        <TextBox x:Name="txtNumber" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Margin="60,310,0,0"/>
+        <Button x:Name="btnGet" Click="BtnGet_Click" Content="GET" Foreground="ForestGreen" Background="White" FontWeight="Bold" BorderBrush="ForestGreen" BorderThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="60,351,0,0"/>
+        <Label Content="Insert Name Text" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,47,0,0"/>
+        <Label Content="Get Name by Number" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,279,0,0"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="2" Stroke="Black" VerticalAlignment="Top" Width="285" Margin="60,218,0,0" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="lblResult" Content="" FontWeight="Bold" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="377,378,0,0" Width="147"/>
+
     </Grid>
 </Window>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IconApp"
         mc:Ignorable="d"
-        Title="Icon" Height="450" Width="800" FontFamily="Century Gothic" >
+        Title="Icon" Height="450" Width="800" FontFamily="Century Gothic" WindowStartupLocation="CenterScreen" >
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="366" VerticalAlignment="Top" Width="737" Margin="28,22,0,0"/>
         <Label FontWeight="Bold" Content="#3" Margin="320,182,324,198"/>
