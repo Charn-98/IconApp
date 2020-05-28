@@ -54,6 +54,8 @@ namespace IconApp
         {
             bool bValid = false;
             decimal dResult = 0;
+
+            //check for proper decimal seperator 
             string sDecimal = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
 
             if (e.Text == sDecimal || decimal.TryParse(e.Text, out dResult))

@@ -25,23 +25,30 @@ namespace _03_IconApp
         public MainWindow()
         {
             InitializeComponent();
-            dtResults.ItemsSource = oNames;
+            dtResults.ItemsSource = oNames; //untilizing binding expression
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             int iCount = oNames.Count + 1;
 
-            if (!string.IsNullOrEmpty(txtName.Text))
+            try
             {
-                oNames.Add(iCount, txtName.Text);
-                dtResults.ItemsSource = null;
-                dtResults.ItemsSource = oNames;
-                txtName.Text = string.Empty;
+                if (!string.IsNullOrEmpty(txtName.Text))
+                {
+                    oNames.Add(iCount, txtName.Text);
+                    dtResults.ItemsSource = null;
+                    dtResults.ItemsSource = oNames; //utilizing binding expression
+                    txtName.Text = string.Empty;
+                }
+                else
+                {
+                    MessageBox.Show("Field was left empty. Please provide valid name.", "Invalid Input", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Field was left empty. Please provide valid name.", "Invalid Input", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Oops! We ran into a problem. Please try again later.", "Invalid Input", MessageBoxButton.OK, MessageBoxImage.Hand);
             }
         }
 
@@ -71,7 +78,10 @@ namespace _03_IconApp
                     }
                     else
                     {
-                        MessageBox.Show($"Sorry, there is nothing do display for number {iItemNumber}. Please enter numbers 1 - {oNames.Count}", "Invalid Input", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        if(oNames.Count == 0)
+                            MessageBox.Show($"Sorry, there is nothing do display for number {iItemNumber}. Please add values to the list", "Invalid Input", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        else
+                            MessageBox.Show($"Sorry, there is nothing do display for number {iItemNumber}. Please enter numbers 1 - {oNames.Count}", "Invalid Input", MessageBoxButton.OK, MessageBoxImage.Warning);
                     }
                 }
                 else

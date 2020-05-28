@@ -19,6 +19,7 @@
         <TextBox x:Name="txtNumber3" PreviewTextInput="IsDecimal" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="366,182,0,0"/>
         <TextBox x:Name="txtNumber4" PreviewTextInput="IsDecimal" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="366,94,0,0" Focusable="True"/>
         <TextBox x:Name="txtNumber5" PreviewTextInput="IsDecimal" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="366,138,0,0"/>
-        <Label x:Name="lblResult" Content="" Background="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="Blue" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="6.976,13.5" Margin="28,357,0,0" Width="737" Height="31"/>
+        <Label x:Name="lblResult" Content="" Background="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="6.976,13.5" Margin="28,357,0,0" Width="737" Height="31"/>
+        <TextBlock Text="1. Write a program that adds 5 numbers. Program should be able to accept input of 5 numbers from a user and display the sum output." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="86,39,0,0" Height="34" Width="654" TextWrapping="Wrap" TextAlignment="Center"/>
     </Grid>
 </Window>

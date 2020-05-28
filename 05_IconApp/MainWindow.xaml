@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_05_IconApp"
         mc:Ignorable="d"
-        Title="ICON" Height="436.466" Width="470.113" WindowStartupLocation="CenterScreen">
+        Title="ICON" Height="436.466" Width="470.113" WindowStartupLocation="CenterScreen" FontFamily="Century Gothic">
     <Grid>
-        <Label Content="ID NUMBER:" FontWeight="Bold" Margin="73,76,290,298"/>
-        <TextBox x:Name="txtIDNumber"  MaxLength="13" Margin="171,74,63,298"/>
+        <Label Content="ID NUMBER:" FontWeight="Bold" Margin="76,87,287,287"/>
+        <TextBox x:Name="txtIDNumber"  MaxLength="13" Margin="174,85,60,287"/>
         <Button x:Name="btnGetInfo" Click="BtnGetInfo_Click" Foreground="Blue" Background="White" BorderBrush="Blue" BorderThickness="2" Content="GET INFO" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="171,146,0,0" Height="36"/>
         <TextBlock x:Name="txtResults" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="63,210,0,0" Height="124" Width="347" TextAlignment="Left" FontWeight="Bold"/>
         <Rectangle Fill="Transparent" HorizontalAlignment="Left" Height="124" Stroke="Blue" StrokeThickness="2" VerticalAlignment="Top" Width="348" Margin="62,210,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="5. Write a program that accepts a user's 13-digit South African ID number as input and displays the following output: Date of birth, Current age, Whether the user's birthday has passed or not, When their next birthday is" VerticalAlignment="Top" TextAlignment="Center" Height="54" Width="435" Margin="17,10,0,0"/>
 
     </Grid>
 </Window>

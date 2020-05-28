@@ -53,10 +53,9 @@ namespace _02_IconApp
                         lblResult.Content = "Added!";
                     }
 
+                    //automatically calculate when the list has 5 valid items
                     if (oNumbers.Count == 5)
                     {
-                        btnAdd.IsEnabled = false;
-                        txtNumber1.IsEnabled = false;
                         Calculate(oNumbers);
                     }
                 }
@@ -82,14 +81,20 @@ namespace _02_IconApp
                 }
                 
                 lblResult.Content = $"Result: {dResult}";
+                btnAdd.IsEnabled = false;
+                txtNumber1.IsEnabled = false;
             }
             catch (OverflowException)
             {
                 lblResult.Content = $"One of the entered numbers are too large. Please try again.";
+                btnAdd.IsEnabled = true;
+                txtNumber1.IsEnabled = true;
             }
             catch (Exception)
             {
                 lblResult.Content = $"There has been a problem calculating the result. Please try again.";
+                btnAdd.IsEnabled = true;
+                txtNumber1.IsEnabled = true;
             }
         }
 

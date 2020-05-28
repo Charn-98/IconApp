@@ -27,27 +27,29 @@ namespace _05_IconApp
 
         private void BtnGetInfo_Click(object sender, RoutedEventArgs e)
         {
-            txtResults.Text = string.Empty;
-
             var dtDOB = new DateTime();
             var dtBirthday = new DateTime();
             var dtNextBirthday = new DateTime();
+
             string sDateOfBirth = string.Empty;
             string sIDNumber = string.Empty;
             string sHasBirthdayPassed = string.Empty;
+
             int iAge = 0;
             int iYear = 0;
             int iMonth = 0;
             int iDay = 0;
+
             bool bHasBirthdayPassed = false;
 
             sIDNumber = txtIDNumber.Text;
+            txtResults.Text = string.Empty;
 
             try
             {
                 if (sIDNumber.Count() == 13)
                 {
-                    if (IsDigitsOnly(sIDNumber))
+                    if (IsOnlyNumbers(sIDNumber))
                     {
                         iYear = Convert.ToInt16(sIDNumber.Substring(0, 2));
                         iMonth = Convert.ToInt16(sIDNumber.Substring(2, 2));
@@ -96,7 +98,7 @@ namespace _05_IconApp
                 }
                 else
                 {
-                    MessageBox.Show("ID Number has an invalid length. Please try again.", "Invalid ID Number", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("ID Number has to be 13 characters. Please try again.", "Invalid ID Number", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
             catch (Exception)
@@ -105,7 +107,7 @@ namespace _05_IconApp
             }
         }
 
-        bool IsDigitsOnly(string AIDNumber)
+        bool IsOnlyNumbers(string AIDNumber)
         {
             foreach (char item in AIDNumber)
             {
